@@ -88,14 +88,42 @@ document.write('</ul>');
 
 document.write('<h2>Eliminar un elemento de una posicion particular del arreglo (4)</h2>');
 
-// peliculas.splice(4,1);
-peliculas.splice(2,3);
+peliculas.splice(4,1);
+// peliculas.splice(2,3);
 
 document.write('<ul>');
 for(let posicion=0; posicion < peliculas.length; posicion++){
     document.write(`<li>${peliculas[posicion]}</li>`);
 }
 document.write('</ul>');
+
+// OPERACIONES EXTRAS
+document.write('<h2>Operaciones extras</h2>');
+
+//buscar un elemento en el arreglo
+document.write(peliculas.includes('Endgame'));
+document.write('<br>'+peliculas.includes('Capitana marvel'));
+document.write(`<p>¿Encontramos Endgame?: ${peliculas.includes('Endgame')}</p>`)
+
+// El operador condicional ternario (condicion logica)? si es true: si es false
+
+let existeEndgame = peliculas.includes('Endgame') ? 'Si existe en nuestra lista de peliculas': 'No existe la pelicula en nuestra lista';
+document.write(`<p>¿Encontramos Endgame?: ${existeEndgame}</p>`);
+document.write(`<p>¿Encontramos Capitana marvel?: ${peliculas.includes('Capitana marvel') === true ? 'Si existe en nuestra lista de peliculas': 'No existe la pelicula en nuestra lista'}</p>`);
+
+//ordenar un arreglo
+
+document.write('<h2>Lista de peliculas ordenada</h2>');
+
+peliculas.unshift('antman');
+peliculas.sort();
+
+document.write('<ul>');
+for(let posicion=0; posicion < peliculas.length; posicion++){
+    document.write(`<li>${peliculas[posicion]}</li>`);
+}
+document.write('</ul>');
+
 
 
 
