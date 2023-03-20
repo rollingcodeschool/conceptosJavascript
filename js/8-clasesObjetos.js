@@ -66,7 +66,7 @@ class VideoJuego {
 // Instancio el objeto
 let super_mario = new VideoJuego('Super Mario', 'Aventura', 100, 'Nintendo');
 
-// Los getters y setters se escriben como metodos
+// Los getters y setters se definen como metodos dentro de la clase pero fuera de ella se invocan como propiedades
 super_mario.titulo = 'Super mario cart'; // Utilizo la propiedad computada "set titulo" para modificar el valor de la propiedad titulo
 super_mario.setGenero('Carreras');
 super_mario.precio = 500;
